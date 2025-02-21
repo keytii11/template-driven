@@ -1,1 +1,63 @@
-<p>reactive-validation works!</p>
+<h1 class="heading">Class Form</h1>
+<h3 class="heading" id="secondary">Holy Angel University</h3>
+
+<div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input class="input-box" type="text" id="name" formControlName="name" placeholder="Jane Doe" required>
+      <div *ngIf="loginForm.controls['name'].invalid && loginForm.controls['name'].touched" class="error">
+        Name is required and must contain only letters.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input class="input-box" type="email" id="email" formControlName="email" placeholder="janedoe@gmail.com" required>
+      <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched" class="error">
+        Email is required and must be a valid email.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password:</label>
+      <input class="input-box" type="password" id="password" formControlName="password" placeholder="Password" required>
+      <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" class="error">
+        Password is required and must be at least 6 characters.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone:</label>
+      <input class="input-box" type="tel" id="phone" formControlName="phone" placeholder="0987654321" required>
+      <div *ngIf="loginForm.controls['phone'].invalid && loginForm.controls['phone'].touched" class="error">
+        Phone is required and must be a valid number (10-11 digits).
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="message" class="form-label">Message:</label>
+      <textarea class="input-box" id="message" formControlName="message" placeholder="Input your concerns here" required></textarea>
+      <div *ngIf="loginForm.controls['message'].invalid && loginForm.controls['message'].touched" class="error">
+        Message is required and must be at least 5 characters long.
+      </div>
+    </div>
+
+    <button class="btn btn-danger" type="submit" [disabled]="loginForm.invalid">Submit</button>
+
+  </form>
+</div>
+
+<p class="submitted" *ngIf="submitted">
+  You have entered: <br>
+  Name: {{loginForm.value.name}} <br>
+  Email: {{loginForm.value.email}} <br>
+  Password: {{loginForm.value.password}} <br>
+  Phone: {{loginForm.value.phone}} <br>
+  Message: {{loginForm.value.message}}
+</p>
+
+<p class="nameko">****** Kate Anne S. David ******</p>
+
+<!-- <app-reactive-validation></app-reactive-validation> -->

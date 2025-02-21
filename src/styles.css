@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+
+form{
+    
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+
+.navbar {
+background-color: #8E1616 !important;
+}
+
+.navbar .nav-link, .navbar-brand {
+color: #f8f8f8 !important;
+}
+
+
+.input-box{
+  width: 50%;
+  height: 30px;
+  margin: 2px;
+  margin-left: 10px;
+}
+
+#message{
+  width: 70%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.heading{
+  padding: 12px 20px;
+  background-color: #8E1616;
+  color: #f8f8f8;
+  text-align: center;
+}
+#secondary{
+  background-color: #FFB200;
+}
+.nameko, .submitted{
+  text-align: center;
+}
+
+.mb-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%; 
+  margin: 10px auto; 
+}
+
+.mb-3 label {
+  width: 30%;
+  text-align: right; 
+  margin-left: 10px;
+}
+
+.mb-3 input, .mb-3 textarea {
+  width: 70%;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

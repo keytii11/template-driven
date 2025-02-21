@@ -1,1 +1,41 @@
-<p>template-driven works!</p>
+<h1 class="heading">Class Form</h1>
+<h3 class="heading"  id="secondary">Holy Angel University</h3>
+<div>
+<form (ngSubmit)="onSubmit()">
+<div class="mb-3">
+
+<label for="name" class="form-label">Name:</label>
+<input class="input-box" type="text" name="username" [(ngModel)]="username" placeholder="Jane doe"  required> <br>
+</div>
+
+<div class="mb-3">
+<label for="email" class="form-label">Email:</label>
+<input class="input-box" type="email" name="email" [(ngModel)]="anytext" placeholder="janedoe@gmail.com"  required> <br>
+</div>
+
+<div class="mb-3">
+<label for="password" class="form-label">Password:</label>
+<input class="input-box" type="password" name="password" [(ngModel)]="password" placeholder="password"  required> <br> 
+</div>
+
+<div class="mb-3">
+<label for="phone" class="form-label">Phone:</label>
+<input class="input-box" type="tel" name="phone" [(ngModel)]="phone" placeholder="0987654321"  required> <br>
+</div>
+
+<div class="mb-3">
+    <label for="message" class="form-label">Message:</label>
+    <textarea class="input-box" id="message" name="message" [(ngModel)]="message" placeholder="Input your concerns here"  required></textarea>
+    </div>
+
+<input class="btn btn-danger" type="submit"  [disabled]="!username">
+
+</form>
+</div>  
+
+<p class="nameko">****** Kate Anne S. David ******</p>
+
+
+<p class="submitted" *ngIf="submitted">You have entered: {{username}}, {{email}}, {{password}}, {{phone}}, {{message}}, {{anytext}}</p>
+
+<!-- <app-template-driven></app-template-driven> -->
